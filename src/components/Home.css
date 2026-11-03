@@ -1,0 +1,290 @@
+
+/* HOME SECTION */
+.home {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 30px 60px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(0, 180, 190, 0.12), transparent 55%),
+    linear-gradient(120deg, #05080d, #08131a, #05080d);
+  color: white;
+}
+
+/* Glowing background lights */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, #00d5ff 2px, transparent 4px),
+    radial-gradient(circle at 80% 20%, #00d5ff 2px, transparent 4px),
+    radial-gradient(circle at 70% 75%, #00d5ff 2px, transparent 4px),
+    radial-gradient(circle at 25% 80%, #00d5ff 2px, transparent 4px),
+    radial-gradient(circle at 50% 15%, #a855f7 2px, transparent 4px);
+  background-size: 350px 300px;
+  opacity: 0.65;
+  animation: lightsMove 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes lightsMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-18px);
+  }
+}
+
+/* Main content */
+.home-content {
+  max-width: 1150px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Introduction */
+.home-content h3 {
+  font-size: 18px;
+  color: #a5f3fc;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Your name */
+.home-content h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 25px 0;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #22d3ee,
+    #10b981,
+    #8b5cf6
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientMove 5s linear infinite;
+  position: relative;
+}
+
+@keyframes nameGradient {
+  to {
+    background-position: 250% center;
+  }
+}
+
+/* Professional tagline */
+.home-content h2 {
+  font-size: clamp(21px, 3vw, 34px);
+  color: #4ddbea;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Description */
+.description {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #94a3b8;
+  margin: 0 auto 35px;
+  max-width: 950px;
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.home-buttons button,
+.home-buttons a {
+  padding: 16px 30px;
+  margin: 5px;
+  border: 1px solid #26384a;
+  border-radius: 17px;
+  background: #172333;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover */
+.home-buttons button:hover,
+.home-buttons a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 210, 220, 0.3);
+  border-color: #06b6d4;
+}
+
+/* First button gradient */
+.home-buttons button:first-child,
+.home-buttons a:first-child {
+  background: linear-gradient(110deg, #06b6d4, #10b981);
+  border: none;
+}
+
+.home-buttons button:first-child:hover,
+.home-buttons a:first-child:hover {
+  box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home {
+    min-height: 85vh;
+    padding: 90px 20px 50px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .home-content h3 {
+    font-size: 15px;
+  }
+
+  .home-buttons button,
+  .home-buttons a {
+    padding: 13px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Internship availability badge */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  margin-bottom: 35px;
+  border: 1px solid #243448;
+  border-radius: 30px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #cbd5e1;
+  font-size: 16px;
+  font-weight: 600;
+  animation: badgeGlow 3s ease-in-out infinite;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #10b981;
+  animation: dotPulse 1.5s infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes badgeGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(6, 182, 212, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(6, 182, 212, 0.2);
+  }
+}
+
+@media (max-width: 600px) {
+  .availability-badge {
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* ==================================
+   LIGHT THEME - HOME PAGE
+================================== */
+
+.app.light-theme .home {
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(0, 180, 190, 0.08),
+      transparent 55%
+    ),
+    linear-gradient(120deg, #f8fafc, #eaf6fa, #ffffff);
+
+  color: #0f172a;
+}
+
+.app.light-theme .home-content h3 {
+  color: #0e7490;
+}
+
+.app.light-theme .home-content h1 {
+  background: linear-gradient(
+    90deg,
+    #0f172a,
+    #0891b2,
+    #059669,
+    #6d28d9
+  );
+
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.app.light-theme .home-content h2 {
+  color: #0e7490;
+}
+
+.app.light-theme .description {
+  color: #475569;
+}
+
+.app.light-theme .availability-badge {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #334155;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.app.light-theme .home-buttons button:not(:first-child),
+.app.light-theme .home-buttons a:not(:first-child) {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.app.light-theme .home-buttons button:not(:first-child):hover,
+.app.light-theme .home-buttons a:not(:first-child):hover {
+  border-color: #06b6d4;
+}
+

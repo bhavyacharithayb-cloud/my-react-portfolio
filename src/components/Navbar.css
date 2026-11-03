@@ -1,0 +1,158 @@
+
+.navbar {
+  width: 100%;
+  min-height: 105px;
+  padding: 15px 2.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  background: #070d13;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.15);
+  position: relative;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #06d6c0;
+  border-radius: 14px;
+  color: #22d3ee;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.brand-info h2 {
+  color: white;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.brand-info p {
+  color: #22d3ee;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+  background: #0a111a;
+  border: 1px solid #1e293b;
+  border-radius: 50px;
+  flex: 1;
+}
+
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 10px;
+  border-radius: 30px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #67e8f9;
+  background: rgba(6, 182, 212, 0.15);
+}
+
+.connect-btn {
+  padding: 11px 16px;
+  color: white;
+  background: linear-gradient(100deg, #06b6d4, #10b981);
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.connect-btn span {
+  font-size: 17px;
+  margin-left: 4px;
+}
+
+.connect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(6, 182, 212, 0.3);
+}
+
+@media (max-width: 1150px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Dark / Light Theme Toggle */
+.theme-toggle {
+  padding: 11px 16px;
+  border-radius: 25px;
+  border: 1px solid #12cfe0;
+  background: rgba(0, 190, 220, 0.08);
+  color: #20d5e8;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #12cfe0;
+  color: #07111b;
+  transform: translateY(-2px);
+}
+
+/* Navbar logo */
+.logo {
+  color: #22d3ee;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+
+.theme-toggle:hover {
+  background: #12cfe0;
+  color: #07111b;
+  transform: translateY(-2px);
+}
+
